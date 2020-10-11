@@ -1,5 +1,5 @@
 var api = "fa97e6e43217426928e8bfb8c6a5a48c";
-var defaultCity = "Toronto";
+var defaultCity = document.querySelector("#default-load");
 var formEl = document.querySelector("#user-form");
 var cityInputEl = document.querySelector("#city");
 var search = document.querySelector("#search-city");
@@ -8,6 +8,17 @@ var cityContainerEl = document.querySelector("#city-container");
 var forecastContainer = document.querySelector("#forecast-content");
 var savedSearches = document.querySelector("#recently-viewed");
 var searches = [];
+
+
+var defaultLoad = function() {
+    getWeather("Toronto");
+        
+    
+    cityInputEl.value = "";
+    cityContainerEl.textContent = "";
+    forecastContainer.textContent = "";
+        
+};
 
 var saveSearches = function(city) {
     if (searches.includes(city)) {
@@ -227,7 +238,7 @@ var formSubmitHandler = function(event) {
 };
 
 
-
+defaultLoad();
 formEl.addEventListener("submit", formSubmitHandler);
 load_searches();
 savedSearches.addEventListener("click", load_saved_search);
