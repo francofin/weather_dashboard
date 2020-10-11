@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/owl.carousel.css" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>Weather Forecast</title>
+</head>
+
+<body class="flex-column min-100-vh">
+
+  <div class="hero-area">
+    <div class="hero-slides owl-carousel">
+      <!-- Single Slide -->
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/brazil.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/city2.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/clear_skies.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/egypt.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/newyork.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/paris.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/rain.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/toronto.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/london.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/espana.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/greece.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/rain2.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/paris2.jpg);"></div>
+      <div class="single-hero-slide bg-img background-overlay" style="background-image: url(assets/img/brazil2.jpg);"></div>
+    </div>
+
+    <div class="hero-post-area">
+        <div style = "text-align: center; padding-bottom: 100px;">
+          <h1 class="display-4 mb-4" style="color: white; font-size: 72px;">
+            Weather DashBoard
+          </h1>
+          <h2 id="search-city" style="font-size: 32px; color: white;"></h2>
+          <h2 id="search-date" style="font-size: 32px; color: white;"></h2>
+        </div>
+    </div>
+  </div>
+
+
+  <main class="row" style="padding-top: 20px;">
+    <div class="col-12 col-md-3">
+      <div class="card">
+        <h3 class="card-header">Search City</h3>
+        <form id="user-form" class="card-body">
+          <label class="form-label" for="city">City</label>
+          <input name="city" id="city" type="text" autofocus="true" class="form-input" />
+          <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <div class="card" id="recently-viewed">
+        <h3 class="card-header">Recently Viewed</h3>
+      </div>
+    </div>
+  
+    <div class="col-12 col-md-8">
+      <div id="city-container"></div>
+      <div class = "row justify-content-center" id ="forecast-content">
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/js/jquery/jquery-2.2.4.min.js"></script>
+  <script src="./assets/js/plugins.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/active.js"></script>
+  <script src="./assets/js/homepage.js"></script>
+</body>
+
+</html>
