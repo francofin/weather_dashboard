@@ -125,7 +125,7 @@ var getForecast = function(forecast) {
                     var datalist = document.createElement("ul");
 
                     var icon = document.createElement("img");
-                    icon.setAttribute("src", "http://openweathermap.org/img/w/"+forecasts[i].weather[0].icon+".png");
+                    icon.setAttribute("src", "https://openweathermap.org/img/w/"+forecasts[i].weather[0].icon+".png");
                     icon.classList = "card-img-top";
                     card_body.appendChild(icon);
 
@@ -196,7 +196,7 @@ var load_saved_search = function(event) {
 
 
 var getWeather = function(city) {
-    var apiUrl = "http://api.openweathermap.org/data/2.5/weather?q="+ city + "&units=metric&appid=" + api;
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q="+ city + "&units=metric&appid=" + api;
 
     fetch(apiUrl).then(function(response) {
         if(response.ok) {
